@@ -16,7 +16,7 @@ export const addToCart = (
     const { productId } = req.body;
 
     if (typeof productId !== 'number') {
-      res.status(400).json({ message: "Invalid productId" });
+      res.status(400).json({ message: "Numéro de ^produit invalide" });
       return;
     }
 
@@ -24,7 +24,7 @@ export const addToCart = (
     const user = users.find(u => u.email === req.user?.email);
 
     if (!user) {
-      res.status(404).json({ message: "User not found" });
+      res.status(404).json({ message: "Utilisateur non trouvé" });
       return;
     }
 
@@ -54,7 +54,7 @@ export const addToWishlist = (
     const { productId } = req.body;
 
     if (typeof productId !== 'number') {
-      res.status(400).json({ message: "Invalid productId" });
+      res.status(400).json({ message: "id de produit invalide" });
       return;
     }
 
@@ -62,7 +62,7 @@ export const addToWishlist = (
     const user = users.find(u => u.email === req.user?.email);
 
     if (!user) {
-      res.status(404).json({ message: "User not found" });
+      res.status(404).json({ message: "Utilisateur non trouvable" });
       return;
     }
 
@@ -80,14 +80,14 @@ export const addToWishlist = (
 export const removeFromCart = (req: AuthRequest, res: Response) => {
   const productId = Number(req.params.productId);
   if (isNaN(productId)) {
-    res.status(400).json({ message: "Invalid product ID" });
+    res.status(400).json({ message: "id de produit invalide" });
     return ;
   }
 
   const users = readUsers();
   const user = users.find(u => u.email === req.user?.email);
   if (!user) {
-    res.status(404).json({ message: "User not found" });
+    res.status(404).json({ message: "Utilisateur non trouvable" });
     return ;
   }
 
@@ -99,14 +99,14 @@ export const removeFromCart = (req: AuthRequest, res: Response) => {
 export const removeFromWishlist = (req: AuthRequest, res: Response) => {
   const productId = Number(req.params.productId);
   if (isNaN(productId)) {
-    res.status(400).json({ message: "Invalid product ID" });
+    res.status(400).json({ message: "id de produit invalide" });
     return;
   }
 
   const users = readUsers();
   const user = users.find(u => u.email === req.user?.email);
   if (!user) {
-    res.status(404).json({ message: "User not found" });
+    res.status(404).json({ message: "Utilisateur non trouvable" });
     return;
   }
 

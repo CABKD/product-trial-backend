@@ -17,7 +17,7 @@ export const getProductById = (
     const product = readProducts().find(p => p.id === id);
 
     if (!product) {
-      res.status(404).json({ message: "Not found" });
+      res.status(404).json({ message: "Pas trouvé" });
       return;
     }
 
@@ -85,7 +85,7 @@ export const updateProduct = (
     const index = products.findIndex(p => p.id === id);
 
     if (index === -1) {
-      res.status(404).json({ message: "Not found" });
+      res.status(404).json({ message: "Pas trouvé" });
       return;
     }
 
@@ -115,14 +115,14 @@ export const deleteProduct = (
 
     const exists = products.some(p => p.id === id);
     if (!exists) {
-      res.status(404).json({ message: "Not found" });
+      res.status(404).json({ message: "Pas trouvé" });
       return;
     }
 
     products = products.filter(p => p.id !== id);
     writeProducts(products);
 
-    res.json({ message: "Deleted" });
+    res.json({ message: "Supprimé" });
   } catch (error) {
     next(error);
   }

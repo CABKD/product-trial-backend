@@ -10,6 +10,6 @@ export const isAdmin = (
   if (req.user?.email === "admin@admin.com") {
     return next();
   }
-  res.status(403).json({ message: "Admin only" });
+  res.status(403).json({ message: "Admin seulement" });
 };
 
