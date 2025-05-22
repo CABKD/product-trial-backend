@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "email": "john@example.com",
+    "password": "123456"
+  },
+  {
+    "id": 1747899896301,
+    "username": "testuser",
+    "firstname": "John",
+    "email": "test@example.com",
+    "password": "$2b$10$LzCFMEs98tJXz0j0X7FerO6n1MZvpOAkiFsT5eu/aPvfOwWD5mM2O",
+    "cart": [],
+    "wishlist": []
+  }
+]
