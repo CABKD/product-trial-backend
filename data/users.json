@@ -7,5 +7,16 @@
     "password": "password@",
     "cart": [],
     "wishlist": []
+  },
+  {
+    "id": 1747986986058,
+    "username": "testuser",
+    "firstname": "John",
+    "email": "test@example.com",
+    "password": "$2b$10$brB4QuWzgoYCROa3EpCktOTHrh6zpwbx2Wko9RRoQdDWeiF6QFLry",
+    "cart": [
+      1000
+    ],
+    "wishlist": []
   }
 ]

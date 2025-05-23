@@ -16,7 +16,7 @@ export const addToCart = (
     const { productId } = req.body;
 
     if (typeof productId !== 'number') {
-      res.status(400).json({ message: "Numéro de ^produit invalide" });
+      res.status(400).json({ message: "Numéro de produit invalide" });
       return;
     }
 
